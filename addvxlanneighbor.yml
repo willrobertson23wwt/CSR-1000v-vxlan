@@ -1,5 +1,6 @@
 ---
 - hosts: CSR-1000v-CML
+  gather_facts: no
 
   tasks:
   - name: run show version on the routers
