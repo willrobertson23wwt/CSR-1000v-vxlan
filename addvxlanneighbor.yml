@@ -7,7 +7,7 @@
     ios_config:
      replace: block
      lines:
-      - ingress-replication 1.1.1.1
+      - no ingress-replication 1.1.1.1
      parents:
       - interface nve1
       - member vni 4096
@@ -16,7 +16,7 @@
     ios_config:
      replace: block
      lines:
-      - ingress-replication 1.1.1.1
+      - no ingress-replication 1.1.1.1
      parents:
       - interface nve1
       - member vni 4097
