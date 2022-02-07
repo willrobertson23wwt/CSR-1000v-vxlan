@@ -6,7 +6,7 @@
   - name: run show version on the routers
     ios_command:
      commands: show version | incl Version
-     register: output
+    register: output
   - name: print output
     debug:
      var: output.stdout_lines
