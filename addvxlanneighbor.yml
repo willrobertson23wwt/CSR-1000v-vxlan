@@ -1,4 +1,3 @@
----
 tasks:
 - name: run show version on the routers
   ios_command:
