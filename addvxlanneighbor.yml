@@ -12,12 +12,5 @@
      - interface nve1
      - member vni 4096
       
-  - name: add vxlan neighbor vni 4097
-    ios_config:
-    replace: block
-    lines:
-     - ingress-replication 1.1.1.1
-    parents:
-     - interface nve1
-     - member vni 4097
+
 
