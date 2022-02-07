@@ -1,0 +1,12 @@
+---
+- name: Add_static_route
+  hosts: 192.168.10.254
+  gather_facts: false
+  any_errors_fatal: true
+  
+  tasks:
+  - name: Add static route
+    ios_static_route:
+      prefix: 192.168.20.0
+      mask: 255.255.255.0
+      next_hop: 10.0.0.1
