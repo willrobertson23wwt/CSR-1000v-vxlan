@@ -4,7 +4,7 @@
 
   tasks:
   - name: add vxlan neighbor vni 4096
-     ios_config:
+    ios_config:
      replace: block
      lines:
       - ingress-replication 1.1.1.1
