@@ -12,7 +12,6 @@
      - interface nve1
      - member vni 4096
       
-  tasks:
   - name: add vxlan neighbor vni 4097
     ios_config:
     replace: block
