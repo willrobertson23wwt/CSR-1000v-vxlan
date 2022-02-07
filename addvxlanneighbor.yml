@@ -3,10 +3,11 @@
   gather_facts: no
 
   tasks:
-  - name: run show version on the routers
-    ios_command:
-     commands: show version | incl Version
-    register: output
-  - name: print output
-    debug:
-     var: output.stdout_lines
+  - name: add vxlan neighbor
+    ios_config:
+     lines:
+      - ingress-replication 1.1.1.1
+     parents:
+      - interface nve1
+      - member vni 4096
+
