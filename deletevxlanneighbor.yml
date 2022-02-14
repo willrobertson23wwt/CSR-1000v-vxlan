@@ -6,7 +6,6 @@
   tasks:
   - name: delete vxlan neighbor vni 4096
     ios_config:
-     replace: block
      lines:
       - no ingress-replication {{ ip }}
      parents:
@@ -15,7 +14,6 @@
       
   - name: delete vxlan neighbor vni 4097
     ios_config:
-     replace: block
      lines:
       - no ingress-replication {{ ip }}
      parents:
@@ -24,7 +22,6 @@
 
   - name: delete vxlan neighbor vni 4098
     ios_config:
-     replace: block
      lines:
       - no ingress-replication {{ ip }}
      parents:
@@ -33,7 +30,6 @@
       
   - name: delete vxlan neighbor vni 4099
     ios_config:
-     replace: block
      lines:
       - no ingress-replication {{ ip }}
      parents:
