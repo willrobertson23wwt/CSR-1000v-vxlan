@@ -5,7 +5,6 @@
   tasks:
   - name: add vxlan neighbor vni 4096
     ios_config:
-     replace: block
      lines:
       - ingress-replication {{ ip }}
      parents:
@@ -14,7 +13,6 @@
       
   - name: add vxlan neighbor vni 4097
     ios_config:
-     replace: block
      lines:
       - ingress-replication {{ ip }}
      parents:
@@ -23,7 +21,6 @@
 
   - name: add vxlan neighbor vni 4098
     ios_config:
-     replace: block
      lines:
       - ingress-replication {{ ip }}
      parents:
@@ -32,7 +29,6 @@
       
   - name: add vxlan neighbor vni 4099
     ios_config:
-     replace: block
      lines:
       - ingress-replication {{ ip }}
      parents:
