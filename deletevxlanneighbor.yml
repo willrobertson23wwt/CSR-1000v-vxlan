@@ -1,6 +1,6 @@
 
 ---
-- hosts: CSR-1000v-CML
+- hosts: CSR-Prisma-Hub
   gather_facts: no
 
   tasks:
