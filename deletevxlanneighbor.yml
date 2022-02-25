@@ -3,43 +3,20 @@
 - hosts: CSR-Prisma-Hub
   gather_facts: no
 
-  tasks:
-  - name: delete vxlan neighbor vni 4096
-    ios_config:
-     lines:
-      - no ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4096
-      
-  - name: delete vxlan neighbor vni 4097
-    ios_config:
-     lines:
-      - no ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4097
+ - hosts: CSR-Prisma-Hub
+  gather_facts: no
 
-  - name: delete vxlan neighbor vni 4098
+  tasks:
+  - name: delete vxlan neighbor {{ item }}
     ios_config:
      lines:
       - no ingress-replication {{ ip }}
      parents:
       - interface nve1
-      - member vni 4098
-      
-  - name: delete vxlan neighbor vni 4099
-    ios_config:
-     lines:
-      - no ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4099 
-      
-  - name: delete vxlan neighbor vni 4100
-    ios_config:
-     lines:
-      - no ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4100   
+      - member {{ item }}
+    loop:
+    	- vni 4096
+    	- vni 4097
+    	- vni 4098
+    	- vni 4099
+    	- vni 4100
