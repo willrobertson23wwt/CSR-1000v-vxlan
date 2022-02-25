@@ -12,8 +12,8 @@
       - interface nve1
       - member {{ item }}
     loop:
-    	- vni 4096
-    	- vni 4097
-    	- vni 4098
-    	- vni 4099
-    	- vni 4100
+      - vni 4096
+      - vni 4097
+      - vni 4098
+      - vni 4099
+      - vni 4100
