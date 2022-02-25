@@ -3,9 +3,6 @@
 - hosts: CSR-Prisma-Hub
   gather_facts: no
 
- - hosts: CSR-Prisma-Hub
-  gather_facts: no
-
   tasks:
   - name: delete vxlan neighbor {{ item }}
     ios_config:
