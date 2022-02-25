@@ -4,7 +4,7 @@
   gather_facts: no
 
   tasks:
-  - name: delete vxlan neighbor {{ item }}
+  - name: delete vxlan neighbor
     ios_config:
      lines:
       - no ingress-replication {{ ip }}
