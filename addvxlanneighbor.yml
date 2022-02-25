@@ -3,42 +3,16 @@
   gather_facts: no
 
   tasks:
-  - name: add vxlan neighbor vni 4096
+  - name: delete vxlan neighbor
     ios_config:
      lines:
       - ingress-replication {{ ip }}
      parents:
       - interface nve1
-      - member vni 4096
-      
-  - name: add vxlan neighbor vni 4097
-    ios_config:
-     lines:
-      - ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4097
-
-  - name: add vxlan neighbor vni 4098
-    ios_config:
-     lines:
-      - ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4098
-      
-  - name: add vxlan neighbor vni 4099
-    ios_config:
-     lines:
-      - ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4099     
-      
-  - name: add vxlan neighbor vni 4100
-    ios_config:
-     lines:
-      - ingress-replication {{ ip }}
-     parents:
-      - interface nve1
-      - member vni 4100 
+      - member {{ item }}
+    loop:
+      - vni 4096
+      - vni 4097
+      - vni 4098
+      - vni 4099
+      - vni 4100
