@@ -1,6 +1,6 @@
 
 ---
-- hosts: CSR-Prisma-Hub
+- hosts: ATCBLD0001906-VxLanHub
   gather_facts: no
 
   tasks:
